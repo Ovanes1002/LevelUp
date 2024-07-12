@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>LevelUp</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/style.min.css" />
     </head>
     <body>
@@ -78,5 +79,43 @@
             </div>
             <button class="order">Заказать</button>
         </div>
+        <div class="feedback">
+            <div class="feedback-slider swiper">
+                <div class="feedback-slider__wrapper swiper-wrapper">
+                    <div class="feedback-slider__slide swiper-slide">
+                        <div class="feedback-slider__photo">
+                            <img src="images/man.png" alt="фото клиента" />
+                        </div>
+                        <div class="feedback-slider__username">Имя клиента1</div>
+                        <div class="feedback-slider__descr">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat quisquam
+                            voluptate atque aperiam quasi! Accusamus, odio laborum.
+                        </div>
+                    </div>
+                    <div class="feedback-slider__slide swiper-slide">
+                        <div class="feedback-slider__photo">
+                            <img src="images/man.png" alt="фото клиента" />
+                        </div>
+                        <div class="feedback-slider__username">Имя клиента2</div>
+                        <div class="feedback-slider__descr">Lorem ipsum dolor sit.</div>
+                    </div>
+                    <div class="feedback-slider__slide swiper-slide">
+                        <div class="feedback-slider__photo">
+                            <img src="images/man.png" alt="фото клиента" />
+                        </div>
+                        <div class="feedback-slider__username">Имя клиента3</div>
+                        <div class="feedback-slider__descr">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback-slider__pagination swiper-pagination"></div>
+
+                <div class="feedback-slider__button-prev swiper-button-prev"></div>
+                <div class="feedback-slider__button-next swiper-button-next"></div>
+            </div>
+        </div>
     </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </html>

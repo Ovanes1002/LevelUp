@@ -3,6 +3,8 @@ const gulp = require("gulp"),
     sass = require("gulp-sass")(require("sass")),
     cleanCSS = require("gulp-clean-css"),
     autoprefixer = require("gulp-autoprefixer"),
+    babel = require("gulp-babel"),
+    uglify = require("gulp-uglify"),
     rename = require("gulp-rename"),
     imagemin = require("gulp-imagemin"),
     htmlmin = require("gulp-htmlmin");
@@ -15,14 +17,17 @@ gulp.task("server", function () {
     gulp.watch("src/index.html").on("change", function () {
         browserSync.reload();
     });
-    gulp.watch("src/scss/*.+(scss|sass)").on("change", function () {
+    gulp.watch("src/scss/**/*.+(scss|sass)").on("change", function () {
+        browserSync.reload();
+    });
+    gulp.watch("src/js/*.js").on("change", function () {
         browserSync.reload();
     });
 });
 
 gulp.task("styles", function () {
     return gulp
-        .src("src/scss/*.+(scss|sass)")
+        .src("src/scss/**/*.+(scss|sass)")
         .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
         .pipe(rename({ suffix: ".min", prefix: "" }))
         .pipe(autoprefixer())
@@ -32,8 +37,9 @@ gulp.task("styles", function () {
 });
 
 gulp.task("watch", function () {
-    gulp.watch("src/scss/*.+(scss|sass|css)", gulp.parallel("styles"));
+    gulp.watch("src/scss/**/*.+(scss|sass|css)", gulp.parallel("styles"));
     gulp.watch("src/index.html").on("change", gulp.parallel("html"));
+    gulp.watch("src/js/*.js").on("change", gulp.parallel("scripts"));
 });
 
 gulp.task("html", function () {
@@ -41,6 +47,20 @@ gulp.task("html", function () {
         .src("src/index.html")
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("dist"));
+});
+
+gulp.task("scripts", function () {
+    return (
+        gulp
+            .src("src/js/*.js")
+            .pipe(babel())
+            // .pipe(concat('quiz.min.js'))
+            .pipe(uglify())
+            .on("error", function (err) {
+                console.error("Error in concatenating or transpiling:", err.toString());
+            })
+            .pipe(gulp.dest("dist/js"))
+    );
 });
 
 gulp.task("images", function () {
@@ -51,4 +71,4 @@ gulp.task("videos", function () {
     return gulp.src("src/videos/*").pipe(gulp.dest("dist/videos"));
 });
 
-gulp.task("default", gulp.parallel("watch", "server", "html", "styles", "images", "videos"));
+gulp.task("default", gulp.parallel("watch", "server", "html", "styles", "scripts", "images", "videos"));
