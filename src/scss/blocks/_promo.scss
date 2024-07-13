@@ -57,8 +57,14 @@
             height: 100%;
         }
     }
-    &__features ol li {
-        font-size: 30px;
-        padding: 20px;
+    &__features {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        ol li {
+            font-size: 30px;
+            padding: 20px;
+        }
     }
 }

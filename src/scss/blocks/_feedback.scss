@@ -26,8 +26,6 @@
     padding: 40px 20px 60px 20px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 30px;
-    &__wrapper {
-    }
 
     &__slide {
         display: flex;
@@ -59,12 +57,6 @@
 
     &__pagination {
         margin-top: 20px;
-    }
-
-    &__button-prev {
-    }
-
-    &__button-next {
     }
 }
 
