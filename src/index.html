@@ -26,7 +26,7 @@
                         </ol>
                     </div>
                 </div>
-                <button class="order">Заказать</button>
+                <button class="order-button">Заказать</button>
             </div>
         </div>
         <div class="structure">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <button class="order">Заказать</button>
+            <button class="order-button">Заказать</button>
         </div>
         <div class="feedback">
             <div class="feedback-slider swiper">
@@ -131,10 +131,48 @@
                     <li>Характеристика 2</li>
                     <li>Характеристика 3</li>
                 </ul>
-                <button class="order">Заказать</button>
+                <button class="order-button">Заказать</button>
+            </div>
+        </div>
+        <div class="order-form">
+            <div class="order-form__wrapper">
+                <h2>LevelUp</h2>
+                <div class="timer">
+                    <div class="timer__items">
+                        <div class="timer__item timer__days">00</div>
+                        <div class="timer__item timer__hours">00</div>
+                        <div class="timer__item timer__minutes">00</div>
+                        <div class="timer__item timer__seconds">00</div>
+                    </div>
+                </div>
+                <div class="order-form__content">
+                    <div class="order-form__product">
+                        <div class="order-form__photo">
+                            <img src="images/prod.png" alt="продукт LevelUp" />
+                        </div>
+                        <div class="order-form__price">
+                            <div class="order-form__price-new">3999 &#8381;</div>
+                            <div class="order-form__price-old">7999 &#8381;</div>
+                        </div>
+                    </div>
+                    <div class="order-field">
+                        <div class="order-field__wrapper">
+                            <div class="order-field__name">
+                                <label for="name">Имя:</label>
+                                <input id="name" name="name" type="text" class="order-field__input-name" />
+                            </div>
+                            <div class="order-field__phone">
+                                <label for="phone">Телефон:</label>
+                                <input id="phone" type="number" class="order-field__input-phone" />
+                            </div>
+                            <button class="order-button">Заказать</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/timer.js"></script>
 </html>

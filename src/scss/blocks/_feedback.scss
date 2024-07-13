@@ -1,25 +1,20 @@
 .feedback {
-    padding: 40px 0;
-    background: rgb(55, 16, 78);
-    background: -moz-radial-gradient(
-        circle,
-        rgba(55, 16, 78, 1) 0%,
-        rgba(9, 76, 26, 1) 50%,
-        rgba(64, 10, 89, 1) 100%
+    padding: 100px 0;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(141, 0, 170, 1) 50%,
+        rgba(0, 0, 0, 1) 100%
     );
-    background: -webkit-radial-gradient(
-        circle,
-        rgba(55, 16, 78, 1) 0%,
-        rgba(9, 76, 26, 1) 50%,
-        rgba(64, 10, 89, 1) 100%
+    background: -webkit-linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(141, 0, 170, 1) 50%,
+        rgba(0, 0, 0, 1) 100%
     );
-    background: radial-gradient(
-        circle,
-        rgba(55, 16, 78, 1) 0%,
-        rgba(9, 76, 26, 1) 50%,
-        rgba(64, 10, 89, 1) 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#37104e",endColorstr="#400a59",GradientType=1);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(141, 0, 170, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
 .feedback-slider {
     width: 70%;
