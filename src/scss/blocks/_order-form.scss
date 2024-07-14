@@ -70,7 +70,6 @@
     }
 
     &__price-new {
-        margin-top: 20px;
         text-align: center;
     }
 
@@ -106,10 +105,11 @@
         margin-bottom: 30px;
     }
 
-    &__input-name {
-        padding: 10px;
+    &__input-name,
+    &__input-phone {
+        padding: 5px;
         border-radius: 10px;
-        font-size: 20px;
+        font-size: 0.8em;
         margin-top: 5px;
     }
 
@@ -121,12 +121,6 @@
         margin-bottom: 30px;
     }
 
-    &__input-phone {
-        padding: 10px;
-        border-radius: 10px;
-        font-size: 20px;
-        margin-top: 5px;
-    }
     input[type="number"] {
         appearance: textfield;
     }

@@ -22,26 +22,34 @@
 
     &__product {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
 
     &__doctor-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 364px;
         height: 409px;
         background-color: rgba(0, 0, 0, 0.7);
+        margin-right: 50px;
         padding: 30px;
         border-radius: 30px;
+        flex: 1 1 0;
         img {
             height: 100%;
         }
     }
 
     &__descr {
-        width: 364px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: rgba(0, 0, 0, 0.7);
         padding: 30px;
         border-radius: 30px;
+        flex: 1 1 0;
     }
 
     &__structure {
