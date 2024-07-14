@@ -102,6 +102,18 @@ body {
     right: -15px;
 }
 
+@keyframes price {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.5;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
 @import "blocks/promo";
 @import "blocks/structure";
 @import "blocks/feedback";

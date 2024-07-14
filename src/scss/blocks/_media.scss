@@ -194,6 +194,18 @@
             border-radius: 20px;
             padding: 25px;
         }
+        &__name,
+        &__phone {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // flex-direction: column;
+            margin-bottom: 30px;
+            &:after {
+                width: 100px;
+            }
+        }
     }
     .timer {
         width: 80%;

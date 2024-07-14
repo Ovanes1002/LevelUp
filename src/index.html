@@ -165,13 +165,24 @@
                     </div>
                     <div class="order-field">
                         <div class="order-field__wrapper">
-                            <div class="order-field__name">
+                            <div class="order-field__name" data-title="Пример: Олег">
                                 <label for="name">Имя:</label>
-                                <input id="name" name="name" type="text" class="order-field__input-name" />
+                                <input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    class="order-field__input-name"
+                                    autocomplete="off"
+                                />
                             </div>
-                            <div class="order-field__phone">
-                                <label for="phone">Телефон:</label>
-                                <input id="phone" type="number" class="order-field__input-phone" />
+                            <div class="order-field__phone" data-title="Пример: 89286781230">
+                                <label for="phone">Тел.:</label>
+                                <input
+                                    id="phone"
+                                    type="number"
+                                    class="order-field__input-phone"
+                                    autocomplete="off"
+                                />
                             </div>
                             <button class="order-button">Заказать</button>
                         </div>
